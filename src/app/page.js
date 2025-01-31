@@ -1,6 +1,20 @@
 'use client'; // Ensure it's a Client Component
 
 export default function Home() {
+  const handleMouseOver = (e) => {
+    e.target.style.backgroundColor = '#80DEEA'; // Slightly darker shade on hover
+    e.target.style.transform = 'scale(1.05)';
+  };
+
+  const handleMouseOut = (e) => {
+    e.target.style.backgroundColor = '#B2EBF2';
+    e.target.style.transform = 'scale(1)';
+  };
+
+  const handleClick = () => {
+    alert('Redirecting to Shelter Registration...');
+  };
+
   return (
     <div style={{ textAlign: 'center', padding: '20px', position: 'relative' }}>
       {/* DazeeCoin Price Ticker */}
@@ -63,15 +77,9 @@ export default function Home() {
               boxShadow: '0 6px 10px rgba(0, 0, 0, 0.2)',
               transition: 'background-color 0.3s ease, transform 0.2s ease',
             }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = '#80DEEA'; // Slightly darker shade on hover
-              e.target.style.transform = 'scale(1.05)';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#B2EBF2';
-              e.target.style.transform = 'scale(1)';
-            }}
-            onClick={() => alert('Redirecting to Shelter Registration...')}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+            onClick={handleClick}
           >
             Register Your Shelter
           </button>
@@ -120,14 +128,8 @@ export default function Home() {
               transition: 'background-color 0.3s ease, transform 0.2s ease',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
             }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = '#20B2AA';
-              e.target.style.transform = 'scale(1.05)';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#40E0D0';
-              e.target.style.transform = 'scale(1)';
-            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
           >
             Buy DazeeCoin
           </button>
@@ -146,14 +148,8 @@ export default function Home() {
               transition: 'background-color 0.3s ease, transform 0.2s ease',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
             }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = '#20B2AA';
-              e.target.style.transform = 'scale(1.05)';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#40E0D0';
-              e.target.style.transform = 'scale(1)';
-            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
           >
             Learn More About Our Mission
           </button>
@@ -172,14 +168,8 @@ export default function Home() {
               transition: 'background-color 0.3s ease, transform 0.2s ease',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
             }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = '#20B2AA';
-              e.target.style.transform = 'scale(1.05)';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#40E0D0';
-              e.target.style.transform = 'scale(1)';
-            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
           >
             Roadmap and Plan
           </button>
