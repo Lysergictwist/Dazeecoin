@@ -86,21 +86,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Image Section */}
-      <div style={{ marginTop: '20px' }}>
-        <img
-          src="/dazeecoin.png"
-          alt="DazeeCoin Mascot"
-          style={{
-            width: '300px',
-            height: 'auto',
-            borderRadius: '10px',
-            display: 'block',
-            margin: '0 auto',
-          }}
-        />
-      </div>
-
       {/* Mission Statement */}
       <section style={{ marginTop: '30px' }}>
         <h2 style={{ fontSize: '2rem' }}>Our Mission</h2>
