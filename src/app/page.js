@@ -16,66 +16,74 @@ export default function Home() {
   };
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px', position: 'relative' }}>
-      {/* DazeeCoin Price Ticker */}
-      <div
+    <div style={{ textAlign: 'center', padding: '0', margin: '0', fontFamily: 'Arial, sans-serif' }}>
+      {/* Fixed Header */}
+      <header
         style={{
-          position: 'absolute',
-          top: '20px',
-          left: '20px',
-          backgroundColor: '#ffcccb',
-          borderRadius: '15px',
-          padding: '10px 20px',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
-          border: '2px solid #ff7f7f',
+          position: 'fixed',
+          top: '0',
+          width: '100%',
+          backgroundColor: '#fff',
+          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+          zIndex: '1000',
+          padding: '10px 0',
         }}
       >
-        <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#600' }}>
-          DazeeCoin Price
-        </p>
-        <p style={{ margin: '0', fontSize: '1.2rem', color: '#900' }}>$0.00</p>
-      </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+          {/* DZ Price */}
+          <div
+            style={{
+              backgroundColor: '#ffcccb',
+              borderRadius: '10px',
+              padding: '10px 20px',
+              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+              border: '2px solid #ff7f7f',
+            }}
+          >
+            <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#600' }}>DazeeCoin Price</p>
+            <p style={{ margin: '0', fontSize: '1.2rem', color: '#900' }}>$0.00</p>
+          </div>
 
-      {/* Liquidity Pool Ticker */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '20px',
-          right: '20px',
-          backgroundColor: '#add8e6',
-          borderRadius: '15px',
-          padding: '10px 20px',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
-          border: '2px solid #87cefa',
-        }}
-      >
-        <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#004080' }}>
-          Liquidity Pool
-        </p>
-        <p style={{ margin: '0', fontSize: '1.2rem', color: '#003060' }}>$0.00</p>
-      </div>
+          {/* LP Price */}
+          <div
+            style={{
+              backgroundColor: '#add8e6',
+              borderRadius: '10px',
+              padding: '10px 20px',
+              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+              border: '2px solid #87cefa',
+            }}
+          >
+            <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#004080' }}>Liquidity Pool</p>
+            <p style={{ margin: '0', fontSize: '1.2rem', color: '#003060' }}>$0.00</p>
+          </div>
+        </div>
+      </header>
 
-      {/* Header Section */}
-      <header>
-        <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>Welcome to DazeeCoin</h1>
-        <p style={{ fontSize: '1.5rem', color: 'gray' }}>
-          Empowering pet adoption and care through blockchain technology
-        </p>
+      {/* Main Content */}
+      <main style={{ marginTop: '100px', padding: '20px' }}>
+        {/* Welcome Section */}
+        <div style={{ marginBottom: '30px' }}>
+          <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>Welcome to DazeeCoin</h1>
+          <p style={{ fontSize: '1.5rem', color: 'gray' }}>
+            Empowering pet adoption and care through blockchain technology
+          </p>
+        </div>
 
-        {/* Register Shelter Button */}
-        <div style={{ marginTop: '20px' }}>
+        {/* Buttons Section */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', marginBottom: '30px' }}>
           <button
             style={{
-              backgroundColor: '#B2EBF2', // Lighter Tiffany Blue
-              color: 'black', // Black text
+              backgroundColor: '#B2EBF2',
+              color: 'black',
               border: 'none',
-              padding: '20px 40px',
-              fontSize: '1.5rem',
+              padding: '15px 30px',
+              fontSize: '1.2rem',
               fontWeight: 'bold',
-              borderRadius: '50px',
+              borderRadius: '10px',
               cursor: 'pointer',
-              boxShadow: '0 6px 10px rgba(0, 0, 0, 0.2)',
               transition: 'background-color 0.3s ease, transform 0.2s ease',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             }}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
@@ -83,27 +91,11 @@ export default function Home() {
           >
             Register Your Shelter
           </button>
-        </div>
-      </header>
 
-      {/* Mission Statement */}
-      <section style={{ marginTop: '30px' }}>
-        <h2 style={{ fontSize: '2rem' }}>Our Mission</h2>
-        <p style={{ fontSize: '1.2rem', lineHeight: '1.5', maxWidth: '600px', margin: '0 auto' }}>
-          DazeeCoin is dedicated to reducing pet overpopulation by incentivizing pet adoption
-          and care through blockchain technology. We aim to create a system where shelters,
-          veterinarians, and pet owners are rewarded for doing what’s best for animals in need.
-        </p>
-      </section>
-
-      {/* Action Buttons Section */}
-      <section style={{ marginTop: '50px' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-          {/* Button: Buy DazeeCoin */}
           <button
             style={{
-              backgroundColor: '#40E0D0', // Tiffany Blue
-              color: 'black', // Black text
+              backgroundColor: '#40E0D0',
+              color: 'black',
               border: 'none',
               padding: '15px 30px',
               fontSize: '1.2rem',
@@ -111,55 +103,25 @@ export default function Home() {
               borderRadius: '10px',
               cursor: 'pointer',
               transition: 'background-color 0.3s ease, transform 0.2s ease',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
-            }}
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-          >
-            Buy DazeeCoin
-          </button>
-
-          {/* Button: Learn More About Our Mission */}
-          <button
-            style={{
-              backgroundColor: '#40E0D0', // Tiffany Blue
-              color: 'black', // Black text
-              border: 'none',
-              padding: '15px 30px',
-              fontSize: '1.2rem',
-              fontWeight: 'bold',
-              borderRadius: '10px',
-              cursor: 'pointer',
-              transition: 'background-color 0.3s ease, transform 0.2s ease',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             }}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           >
             Learn More About Our Mission
           </button>
-
-          {/* Button: Roadmap and Plan */}
-          <button
-            style={{
-              backgroundColor: '#40E0D0', // Tiffany Blue
-              color: 'black', // Black text
-              border: 'none',
-              padding: '15px 30px',
-              fontSize: '1.2rem',
-              fontWeight: 'bold',
-              borderRadius: '10px',
-              cursor: 'pointer',
-              transition: 'background-color 0.3s ease, transform 0.2s ease',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)',
-            }}
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-          >
-            Roadmap and Plan
-          </button>
         </div>
-      </section>
+
+        {/* Mission Statement */}
+        <section style={{ marginTop: '30px', padding: '0 20px' }}>
+          <h2 style={{ fontSize: '2rem' }}>Our Mission</h2>
+          <p style={{ fontSize: '1.2rem', lineHeight: '1.5', maxWidth: '600px', margin: '0 auto' }}>
+            DazeeCoin is dedicated to reducing pet overpopulation by incentivizing pet adoption
+            and care through blockchain technology. We aim to create a system where shelters,
+            veterinarians, and pet owners are rewarded for doing what’s best for animals in need.
+          </p>
+        </section>
+      </main>
     </div>
   );
 }
