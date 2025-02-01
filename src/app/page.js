@@ -19,10 +19,11 @@ export default function Home() {
 
   return (
     <div style={{ textAlign: 'center', padding: '0', margin: '0', fontFamily: 'Arial, sans-serif' }}>
-      {/* Large Register Shelter Button */}
+      {/* Header Section with Black Background */}
       <div
         style={{
-          backgroundColor: '#B2EBF2',
+          backgroundColor: '#000', // Black background
+          color: '#fff', // White text
           padding: '20px 0',
           boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
           borderBottom: '2px solid #87cefa',
@@ -31,6 +32,7 @@ export default function Home() {
           zIndex: '1000',
         }}
       >
+        {/* Large Register Shelter Button */}
         <button
           style={{
             backgroundColor: '#007BFF',
@@ -50,54 +52,52 @@ export default function Home() {
         >
           Register Your Shelter
         </button>
+
+        {/* DZ Price and LP Price Buttons */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: '20px',
+            gap: '20px',
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: '#ffcccb',
+              borderRadius: '10px',
+              padding: '10px 20px',
+              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+              border: '2px solid #ff7f7f',
+              flex: '1',
+              maxWidth: '200px',
+            }}
+          >
+            <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#600' }}>
+              DazeeCoin Price
+            </p>
+            <p style={{ margin: '0', fontSize: '1.2rem', color: '#900' }}>$0.00</p>
+          </div>
+
+          <div
+            style={{
+              backgroundColor: '#add8e6',
+              borderRadius: '10px',
+              padding: '10px 20px',
+              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+              border: '2px solid #87cefa',
+              flex: '1',
+              maxWidth: '200px',
+            }}
+          >
+            <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#004080' }}>
+              Liquidity Pool
+            </p>
+            <p style={{ margin: '0', fontSize: '1.2rem', color: '#003060' }}>$0.00</p>
+          </div>
+        </div>
       </div>
-
-      {/* DZ Price and LP Price */}
-      <header
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '20px',
-          backgroundColor: '#fff',
-          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-          marginBottom: '30px',
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: '#ffcccb',
-            borderRadius: '10px',
-            padding: '10px 20px',
-            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-            border: '2px solid #ff7f7f',
-            flex: '1',
-            margin: '0 10px',
-          }}
-        >
-          <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#600' }}>
-            DazeeCoin Price
-          </p>
-          <p style={{ margin: '0', fontSize: '1.2rem', color: '#900' }}>$0.00</p>
-        </div>
-
-        <div
-          style={{
-            backgroundColor: '#add8e6',
-            borderRadius: '10px',
-            padding: '10px 20px',
-            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-            border: '2px solid #87cefa',
-            flex: '1',
-            margin: '0 10px',
-          }}
-        >
-          <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#004080' }}>
-            Liquidity Pool
-          </p>
-          <p style={{ margin: '0', fontSize: '1.2rem', color: '#003060' }}>$0.00</p>
-        </div>
-      </header>
 
       {/* Welcome Section */}
       <main style={{ padding: '20px' }}>
