@@ -83,6 +83,30 @@ export default function Home() {
           <p className="text-base font-bold leading-7 max-w-2xl mx-auto mb-8 text-center">
             Join us on this journey to give pets the forever homes they deserve—one DazeeCoin at a time.
           </p>
+
+          {/* Action Buttons */}
+          <div className="flex justify-center gap-5 flex-wrap mt-8">
+            <button
+              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
+              onClick={() => handleGenericClick('Buy DazeeCoin')}
+            >
+              Buy DazeeCoin
+            </button>
+
+            <button
+              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
+              onClick={() => handleGenericClick('Roadmap')}
+            >
+              Roadmap
+            </button>
+
+            <button
+              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
+              onClick={() => handleGenericClick('Our Story')}
+            >
+              Our Story
+            </button>
+          </div>
         </section>
       </main>
     </div>
