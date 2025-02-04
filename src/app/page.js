@@ -2,11 +2,11 @@
 
 export default function Home() {
   const handleMouseOver = (e) => {
-    e.target.style.transform = 'scale(1.05)';
+    e.target.classList.add('scale-105');
   };
 
   const handleMouseOut = (e) => {
-    e.target.style.transform = 'scale(1)';
+    e.target.classList.remove('scale-105');
   };
 
   const handleShelterClick = () => {
@@ -18,162 +18,67 @@ export default function Home() {
   };
 
   return (
-    <div style={{ textAlign: 'center', padding: '0', margin: '0', fontFamily: 'Arial, sans-serif' }}>
+    <div className="text-center p-0 m-0 font-sans">
       {/* Header Section with Black Background */}
-      <div
-        style={{
-          backgroundColor: '#000', // Black background
-          color: '#fff', // White text
-          padding: '20px 0',
-          boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-          borderBottom: '2px solid #87cefa',
-          position: 'sticky',
-          top: '0',
-          zIndex: '1000',
-        }}
-      >
+      <div className="bg-black text-white py-5 shadow-md border-b-2 border-blue-300 sticky top-0 z-50">
         {/* Large Register Shelter Button */}
         <button
-          style={{
-            backgroundColor: '#007BFF',
-            color: '#fff',
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            padding: '20px 50px',
-            borderRadius: '50px',
-            border: 'none',
-            cursor: 'pointer',
-            boxShadow: '0 6px 10px rgba(0, 0, 0, 0.2)',
-            transition: 'transform 0.2s ease',
-          }}
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
+          className="bg-blue-500 text-white text-2xl font-bold py-5 px-10 rounded-full shadow-lg hover:scale-105 transition-transform"
           onClick={handleShelterClick}
         >
           Register Your Shelter
         </button>
 
         {/* DZ Price and LP Price Buttons */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: '20px',
-            gap: '20px',
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: '#ffcccb',
-              borderRadius: '10px',
-              padding: '10px 20px',
-              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-              border: '2px solid #ff7f7f',
-              flex: '1',
-              maxWidth: '200px',
-            }}
-          >
-            <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#600' }}>
-              DazeeCoin Price
-            </p>
-            <p style={{ margin: '0', fontSize: '1.2rem', color: '#900' }}>$0.00</p>
+        <div className="flex justify-center items-center mt-5 gap-5">
+          <div className="bg-red-100 rounded-md p-4 shadow-md border-2 border-red-300 flex-1 max-w-xs">
+            <p className="m-0 font-bold text-sm text-red-800">DazeeCoin Price</p>
+            <p className="m-0 text-lg text-red-900">$0.00</p>
           </div>
 
-          <div
-            style={{
-              backgroundColor: '#add8e6',
-              borderRadius: '10px',
-              padding: '10px 20px',
-              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
-              border: '2px solid #87cefa',
-              flex: '1',
-              maxWidth: '200px',
-            }}
-          >
-            <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#004080' }}>
-              Liquidity Pool
-            </p>
-            <p style={{ margin: '0', fontSize: '1.2rem', color: '#003060' }}>$0.00</p>
+          <div className="bg-blue-100 rounded-md p-4 shadow-md border-2 border-blue-300 flex-1 max-w-xs">
+            <p className="m-0 font-bold text-sm text-blue-800">Liquidity Pool</p>
+            <p className="m-0 text-lg text-blue-900">$0.00</p>
           </div>
         </div>
       </div>
 
       {/* Welcome Section */}
-      <main style={{ padding: '20px' }}>
-        <div style={{ marginBottom: '30px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>Welcome to DazeeCoin</h1>
-          <p style={{ fontSize: '1.5rem', color: 'gray' }}>
+      <main className="p-5">
+        <div className="mb-8">
+          <h1 className="text-3xl mb-2">Welcome to DazeeCoin</h1>
+          <p className="text-lg text-gray-600">
             Empowering pet adoption and care through blockchain technology
           </p>
         </div>
 
         {/* Mission Statement */}
-        <section style={{ marginTop: '30px', padding: '0 20px' }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '20px' }}>Our Mission</h2>
-          <p style={{ fontSize: '1.2rem', lineHeight: '1.5', maxWidth: '600px', margin: '0 auto', marginBottom: '30px' }}>
+        <section className="mt-8 px-5">
+          <h2 className="text-2xl mb-5">Our Mission</h2>
+          <p className="text-base leading-7 max-w-2xl mx-auto mb-8">
             DazeeCoin is dedicated to reducing pet overpopulation by incentivizing pet adoption
             and care through blockchain technology. We aim to create a system where shelters,
             veterinarians, and pet owners are rewarded for doing what’s best for animals in need.
           </p>
 
           {/* Action Buttons */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+          <div className="flex justify-center gap-5 flex-wrap">
             <button
-              style={{
-                backgroundColor: '#40E0D0',
-                color: 'black',
-                border: 'none',
-                padding: '15px 30px',
-                fontSize: '1.2rem',
-                fontWeight: 'bold',
-                borderRadius: '10px',
-                cursor: 'pointer',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.2s ease',
-              }}
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
+              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
               onClick={() => handleGenericClick('Buy DazeeCoin')}
             >
               Buy DazeeCoin
             </button>
 
             <button
-              style={{
-                backgroundColor: '#40E0D0',
-                color: 'black',
-                border: 'none',
-                padding: '15px 30px',
-                fontSize: '1.2rem',
-                fontWeight: 'bold',
-                borderRadius: '10px',
-                cursor: 'pointer',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.2s ease',
-              }}
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
+              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
               onClick={() => handleGenericClick('Roadmap')}
             >
               Roadmap
             </button>
 
             <button
-              style={{
-                backgroundColor: '#40E0D0',
-                color: 'black',
-                border: 'none',
-                padding: '15px 30px',
-                fontSize: '1.2rem',
-                fontWeight: 'bold',
-                borderRadius: '10px',
-                cursor: 'pointer',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                transition: 'transform 0.2s ease',
-              }}
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
+              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
               onClick={() => handleGenericClick('Our Story')}
             >
               Our Story
