@@ -52,38 +52,37 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Mission Statement */}
+        {/* About DazeeCoin */}
         <section className="mt-8 px-5">
-          <h2 className="text-2xl mb-5">Our Mission</h2>
+          <h2 className="text-2xl mb-5">Why We Created DazeeCoin</h2>
           <p className="text-base leading-7 max-w-2xl mx-auto mb-8">
-            DazeeCoin is dedicated to reducing pet overpopulation by incentivizing pet adoption
-            and care through blockchain technology. We aim to create a system where shelters,
-            veterinarians, and pet owners are rewarded for doing what’s best for animals in need.
+            DazeeCoin was created out of a deep passion for animals and a vision for how blockchain technology can
+            empower shelters, pet owners, and communities to support animal welfare in a sustainable way. Too many pets
+            end up in shelters, and many struggle to find homes or receive proper care due to limited funding and
+            awareness. We saw an opportunity to change this by leveraging crypto incentives and decentralized support
+            to make pet adoption and care more rewarding for everyone involved.
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex justify-center gap-5 flex-wrap">
-            <button
-              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
-              onClick={() => handleGenericClick('Buy DazeeCoin')}
-            >
-              Buy DazeeCoin
-            </button>
+          <h2 className="text-2xl mb-5">The Impact We Aim to Make</h2>
+          <ul className="text-base leading-7 max-w-2xl mx-auto mb-8 list-disc list-inside">
+            <li>✅ <strong>Encouraging Adoptions:</strong> Every adoption earns the pet owner a reward in DazeeCoin.</li>
+            <li>✅ <strong>Supporting Shelters & Vets:</strong> A portion of transaction fees is allocated to registered shelters and veterinary clinics.</li>
+            <li>✅ <strong>Building a Digital Paw Print:</strong> With PawPrintz, pet medical records can be stored securely and accessed privately.</li>
+            <li>✅ <strong>Creating a Stronger Community:</strong> Incentives make it easier for people to connect with reputable shelters and pet owners.</li>
+            <li>✅ <strong>Fueling the Future of Pet Care:</strong> Future goals include vet payment integrations, DazeeCoin loyalty programs, and gamified pet care rewards.</li>
+          </ul>
 
-            <button
-              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
-              onClick={() => handleGenericClick('Roadmap')}
-            >
-              Roadmap
-            </button>
+          <h2 className="text-2xl mb-5">A Passion Project With Purpose</h2>
+          <p className="text-base leading-7 max-w-2xl mx-auto mb-8">
+            Unlike many crypto projects built purely for speculation, DazeeCoin is a passion-driven initiative designed to
+            create real, lasting impact. We are committed to transparency, ethical blockchain use, and making pet care
+            better for everyone. By combining technology, community, and a love for animals, we are setting out to change
+            how pet adoption and care are incentivized forever.
+          </p>
 
-            <button
-              className="bg-teal-400 text-black border-none py-4 px-6 text-lg font-bold rounded-lg shadow-md hover:scale-105 transition-transform"
-              onClick={() => handleGenericClick('Our Story')}
-            >
-              Our Story
-            </button>
-          </div>
+          <p className="text-base font-bold leading-7 max-w-2xl mx-auto mb-8 text-center">
+            Join us on this journey to give pets the forever homes they deserve—one DazeeCoin at a time.
+          </p>
         </section>
       </main>
     </div>
